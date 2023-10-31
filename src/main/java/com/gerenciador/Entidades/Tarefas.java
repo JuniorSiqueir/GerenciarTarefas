@@ -5,6 +5,7 @@ public class Tarefas {
     private String titulo;
     private String descricao;
     private LocalDate data;
+    private boolean status;
     
     
     public String getTitulo() {
@@ -25,6 +26,13 @@ public class Tarefas {
     public void setData(LocalDate data) {
         this.data = data;
     }
+    public boolean isStatus() {
+        return status;
+    }
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+    
 
     
     
