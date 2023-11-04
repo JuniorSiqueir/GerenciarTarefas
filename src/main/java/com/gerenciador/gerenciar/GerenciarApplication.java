@@ -2,8 +2,8 @@ package com.gerenciador.gerenciar;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Scanner;
-
 import com.gerenciador.Entidades.Usuario;
+import com.gerenciador.Entidades.Erro;
 
 @SpringBootApplication
 public class GerenciarApplication {
@@ -15,8 +15,14 @@ public class GerenciarApplication {
 		Usuario usuario = new Usuario(null, null, null);
 		
 		System.out.print("Digite seu nome: ");
-		String nome = scanner.nextLine();
-		usuario.setNome(nome);
+        String nome = scanner.nextLine();
+
+		if (Erro.validarNome(nome)) {
+            System.out.println("Nome válido: " + nome);
+			usuario.setNome(nome);
+        } else {
+			
+		}
 
 		System.out.print("Digite o seu email: ");
 		String email = scanner.nextLine();
