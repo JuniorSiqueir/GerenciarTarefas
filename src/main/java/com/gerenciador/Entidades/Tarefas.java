@@ -8,6 +8,10 @@ public class Tarefas {
     private LocalDate data;
     private boolean status;
 
+    public Tarefas(boolean status) {
+        this.status = false;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -32,7 +36,7 @@ public class Tarefas {
         this.data = data;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 
