@@ -3,14 +3,12 @@ package com.gerenciador.Entidades;
 import java.time.LocalDate;
 
 public class Tarefas {
+
     private String titulo;
     private String descricao;
     private LocalDate data;
     private boolean status;
 
-    public Tarefas(boolean status) {
-        this.status = false;
-    }
 
     public String getTitulo() {
         return titulo;
@@ -43,5 +41,7 @@ public class Tarefas {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+
 
 }

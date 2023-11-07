@@ -35,8 +35,4 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public void status() {
-        System.out.println("O nome do Usuario é " + this.getNome() + "e seu email é " + this.getEmail());
-    }
-
 }
