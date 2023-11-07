@@ -28,25 +28,25 @@ public class TarefasApp {
             System.out.println("Formato de data inválido. Use o formato 'AAAA-MM-DD''.");
         }
 
-        System.out.print("Qual é o processo da tarefa? \n1 - Em progresso \n2 - A fazer \n3 - Concluida ");
+        System.out.print("Qual é o processo da tarefa? \n1 - A Fazer \n2 - Concluida ");
         int escolha = scanner.nextInt();
 		scanner.nextLine();
         if (escolha == 1) {
-
+            tarefa.setStatus(false);
+            System.out.println("Tarefa a fazer!");
 		} else if (escolha == 2) {
-
-		} else if (escolha == 3){
+            tarefa.setStatus(true);
+            System.out.println("Parabens, tarefa concluida!");
 
 		} else {
-            System.out.println();
+            System.out.println("Opção invalida!");
         } 
-        tarefa.setStatus(scanner.nextBoolean());
         System.out.println("---------------------------");
         System.out.println("Tarefa adicionada:");
         System.out.println("Titulo da Tarefa: " + tarefa.getTitulo());
         System.out.println("Descrição: " + tarefa.getDescricao());
         System.out.println("Data limite da Tarefa:" + tarefa.getData());
-        System.out.println("Concluída: " + tarefa.getStatus());
+        System.out.println("Status: " + tarefa.getStatus());
 
         scanner.close();
     }
