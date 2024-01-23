@@ -11,13 +11,12 @@ public class GerenciadorApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GerenciadorApplication.class, args);
 		Scanner scanner = new Scanner(System.in);
-		
+
 		System.out.println("---------------------------");
 		System.out.println("Escolha uma opção:");
 		System.out.println("1 - Adicionar Usuário");
 		System.out.println("2 - Adicionar Tarefa");
 		System.out.print("Opção: ");
-		
 
 		int escolha = scanner.nextInt();
 		scanner.nextLine();
